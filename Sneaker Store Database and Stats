@@ -1,0 +1,26 @@
+---Create a sneaker store database 
+
+CREATE TABLE sneakers (ID INTEGER PRIMARY KEY, name TEXT, size INTEGER, retail_price INTEGER, selling_price INTEGER, inventory INTEGER);
+
+INSERT INTO sneakers VALUES 
+(1, "bred_4s", 10, 400, 600,5),
+(2, "thunder_4s", 9, 246, 500, 4),
+(3, "seafoam_4s", 7, 265, 450, 3),
+(4, "sail", 10, 1387, 2000, 5),
+(5, "mcqueen", 9, 590, 650, 2),
+(6, "new_balance", 8, 85, 100, 4);
+
+---Display the data base ordered by price. 
+SELECT * FROM sneakers ORDER BY selling_price;
+
+---How much should be collected once all shoes are sold?
+SELECT SUM(selling_price) FROM sneakers;
+
+--How much is initially invested into invetory?
+SELECT SUM(retail_price) FROM sneakers;
+
+--How much profit is made on each shoe sold?
+SELECT name, selling_price - retail_price FROM sneakers;
+
+--What is the total store profit after initial investment?
+SELECT SUM(selling_price - retail_price) as Total_profit FROM sneakers;

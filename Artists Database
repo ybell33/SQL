@@ -1,0 +1,41 @@
+/* Create 2 tables about the famous people and what they do here */
+
+CREATE TABLE artists (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, age INTEGER);
+
+INSERT into artists(name, age) VALUES ("Shirley Caesar", 84);
+INSERT into artists(name, age) VALUES ("Kirk Franklin", 53);
+INSERT into artists(name, age) VALUES ("Eris Ford", 25);
+INSERT into artists(name, age) VALUES ("Alex Jean", 26);
+INSERT into artists(name, age) VALUES ("Wande", 23); 
+INSERT into artists(name, age) VALUES ( "Kai Uriah" , 22); 
+INSERT into artists(name, age) VALUES ("CeCe Winans",58); 
+INSERT into artists(name, age) VALUES ("Mary Mary", 52); 
+INSERT into artists(name, age) VALUES ("Ella Mai", 28); 
+INSERT into artists(name, age) VALUES ("Chris Brown", 34);
+INSERT into artists(name, age) VALUES ("Drake", 36);
+INSERT into artists(name, age) VALUES ("SZA", 33); 
+INSERT into artists(name, age) VALUES ("Aaliyah", NULL);
+INSERT INTO artists(name, age) VALUES ("Lil Baby", 28);
+INSERT INTO artists (name, age) VALUES ("H.E.R.", 26); 
+
+CREATE TABLE artist_info (id INTEGER PRIMARY KEY AUTOINCREMENT, genre TEXT, top_hit TEXT);
+
+INSERT INTO artist_info (genre, top_hit) VALUES ("gospel", "Rejoice");
+INSERT INTO artist_info (genre, top_hit) VALUES ("gospel","Stomp");
+INSERT INTO artist_info (genre, top_hit) VALUES ("Christian","Bad Energy");
+INSERT INTO artist_info (genre, top_hit) VALUES ("R&B","No Rolling Stone");
+INSERT INTO artist_info (genre, top_hit) VALUES ("Hip Hop","Winning"); 
+INSERT INTO artist_info (genre, top_hit) VALUES ("Hip Hop","Triump"); 
+INSERT INTO artist_info (genre, top_hit) VALUES ("Christian","Pray"); 
+INSERT INTO artist_info (genre, top_hit) VALUES ("gospel","Heaven"); 
+INSERT INTO artist_info (genre, top_hit) VALUES ("R&B","Bood Up"); 
+INSERT INTO artist_info (genre, top_hit) VALUES ("R&B","YO");
+INSERT INTO artist_info (genre, top_hit) VALUES ("Hip Hop","God's Plan");
+INSERT INTO artist_info (genre, top_hit) VALUES ("R&B","Weekend"); 
+INSERT INTO artist_info (genre, top_hit) VALUES ("R&B", "Rock The Boat"); 
+INSERT INTO artist_info (genre, top_hit) VALUES ("Hip Hop", "Woah"); 
+INSERT INTO artist_info (genre, top_hit) VALUES ("R&B", "Focus"); 
+
+/* Use a JOIN query to create a table showing the name, age, genre, and top hit of each artist*/
+
+SELECT a.name, a.age, ai.genre, ai.top_hit FROM artists a JOIN artist_info ai ON a.id = ai.id;

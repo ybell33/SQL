@@ -4,7 +4,7 @@
 
 SELECT firstname, lastname, customerid, country
 FROM chinook.customers
-WHERE country <> 'USA';
+WHERE country <> 'USA'; 
 
 #2. Show only the Customers from Brazil.
 

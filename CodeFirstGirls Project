@@ -51,4 +51,67 @@ VALUES
 (7, 'gingerale', 4.99, 'B2', 'Canada Dry', 'cranberry', '8oz'), 
 (8, 'water', 3.29, 'B2', 'good_gather', NULL, '16oz'); 
 
+-- Health & Beauty
 
+CREATE TABLE health_beauty (
+product_id INT NOT NULL,
+item_name VARCHAR (50) NOT NULL,
+price FLOAT (2),
+amount_in_stock INT NOT NULL,
+aisle_number INT NOT NULL,
+product_category VARCHAR (50)
+);
+
+INSERT INTO health_beauty
+(product_id, item_name, price, amount_in_stock, aisle_number, product_category) 
+VALUES
+(1112, 'concealer', 8.00, 12, 32, 'makeup'),
+(2232, 'Dove', 3.99, 5, 14, 'bar soap'),
+(1313, 'CeraVe', 13.49, 2, 9, 'face wash'),
+(5002, 'OGX', 7.79, 25, 15, 'body wash'),
+(2536, 'Degree', 4.99, 17, 10, 'deodorant'),
+(7843, 'Crest', 5.29, 7, 12, 'toothpaste');
+
+-- Pet Care
+
+CREATE TABLE pets (
+product_id INT NOT NULL,
+item_name VARCHAR (50) NOT NULL,
+price FLOAT (2),
+amount_in_stock INT NOT NULL,
+aisle_number INT NOT NULL,
+product_category VARCHAR (50)
+);
+
+INSERT INTO pets
+(product_id, item_name, price, amount_in_stock, aisle_number, product_category)
+VALUES
+(1084, 'Pedigree', 19.99, 6, 41, 'dog kibble'),
+(8734, 'Beggin Strips', 3.49, 2, 41, 'dog treats'),
+(9202, 'Blue Buffalo', 18.79,  12, 41, 'dog food topper'),
+(0043, 'Tidy Cats', 28.49, 6, 43, 'cat litter'),
+(7543, 'Pet Fresh', 5.89, 11, 44, 'odor eliminator'),
+(2212, 'Resolve', 6.29, 3, 44, 'stain remover');
+
+-- Cookware
+
+CREATE TABLE cookware (
+product_id INT NOT NULL,
+item_name VARCHAR (50) NOT NULL,
+price FLOAT (2),
+sales_price FLOAT (2),
+amount_in_stock INT NOT NULL,
+aisle_number INT NOT NULL,
+product_category VARCHAR (50)
+);
+
+INSERT INTO cookware
+(product_id, item_name, price, sales_price, amount_in_stock, aisle_number, product_category)
+VALUES
+(9780, 'GreenPan Rio', 99.99, 79.99, 3, 25, 'cookware sets'),
+(5378, 'Martha Stewart Collection', 129.99, 99.99, 5, 25, 'cookware sets'),
+(9821, 'Ninja NeverStick', 34.99, 29.99, 9, 24, 'fry pans'),
+(3204, 'Room Essentials', 20.00, 12.99, 12, 23, 'kitchen utensil sets'),
+(8465, 'Cuisinart', 96.99, 75.99, 7, 25, 'stock pots'),
+(3954, 'T-fal Simply', 22.99, 12.99, 2, 25, 'saute pans'),
+(2305, 'Rachael Ray', 129.99, 99.99, 0, 25, 'cookware sets');

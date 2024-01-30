@@ -1,1 +1,54 @@
+CREATE database store_project;
+
+CREATE table produce (item_id INTEGER PRIMARY KEY, 
+product_name VARCHAR (50), price INTEGER, aisle VARCHAR (50), 
+category VARCHAR (50), weightbylbs INTEGER);
+
+INSERT INTO produce (item_id, 
+product_name, price, aisle, 
+category, weightbylbs)
+VALUES 
+(1, 'green bell pepper', .97, 'A1', 'vegetable', 1), 
+(2, 'strawberries', 3.99, 'A1', 'fruit', 4.5), 
+(3, 'celery', 1.74, 'A1', 'vegetable', 2), 
+(4, 'mushrooms', 2.50, 'A1', 'fungi', 1.7),
+(5, 'pineapple', 2.99, 'A1', 'fruit', 2.8),
+(6, 'grapes', 3.25, 'A1', 'fruit', 3), 
+(7, 'kiwi', 2.75, 'A1', 'fruit', 1.2), 
+(8, 'ginger', 1.65, 'A1', 'root', .7);
+
+CREATE table decor (item_id INTEGER PRIMARY KEY, 
+product_name VARCHAR (50), price INTEGER, 
+aisle VARCHAR (50), category VARCHAR (50), color VARCHAR (50));
+
+INSERT INTO decor (item_id, product_name, price, aisle, 
+category, color) 
+VALUES 
+(1, 'throw pillow', 10, 'H2', 'pillows', 'blue'), 
+(2, 'lamp', 25, 'H2', 'lighting', 'tan'), 
+(3, 'lamp', 34.99, 'H2', 'lighting', 'black'), 
+(4, 'throw blanket', 15.75, 'H2', 'bedding', 'blue'), 
+(5, 'ceiling fan', 109.95, 'H2', 'lighting', 'grey'), 
+(6, 'throw blanket', 23.99, 'H2', 'bedding', 'pink'), 
+(7, 'comforter set', 123.99, 'H2', 'bedding', 'grey'), 
+(8, 'wall decor', 35.99, 'H2', 'decorative', 'gold'), 
+(9, 'wall decor', 16.99, 'H2', 'decorative', 'black'), 
+(10, 'woven pillow', 20, 'H2', 'pillows', 'grey');
+
+CREATE TABLE drinks (item_id INTEGER PRIMARY KEY, product_name VARCHAR (50), 
+price INTEGER, aisle VARCHAR (50), brand VARCHAR (50), flavor VARCHAR (50), 
+size VARCHAR (50));
+
+INSERT INTO drinks (item_id, product_name, price, aisle, brand, 
+flavor, size)
+VALUES 
+(1, 'water', 3.99, 'B2', 'Dasani', NULL, '1gal'), 
+(2, 'sparkling water', 4.29, 'B2', 'bubly', 'raspberry', '12oz'),
+(3, 'sparkling water', 3.29, 'B2', 'good_gather', 'peach bellini', '12oz'), 
+(4, 'sparkling water', 8.99, 'B2', 'poppi', 'rasperry', '12oz'),
+(5, 'enery drink', 8.19, 'B2', 'gatorade', 'cool blue', '12oz'),
+(6, 'enery drink', 6.99, 'B2', 'body armor', 'fruit punch', '18oz'), 
+(7, 'gingerale', 4.99, 'B2', 'Canada Dry', 'cranberry', '8oz'), 
+(8, 'water', 3.29, 'B2', 'good_gather', NULL, '16oz'); 
+
 
